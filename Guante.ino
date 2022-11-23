@@ -21,7 +21,7 @@ SoftwareSerial modu(TXD, RXD);
 Simple_MPU6050 mpu;
 
 //                  Eje X    Eje Y    Eje Z     Rot X   Rot Y     Rot Z 
-//#define OFFSETS  -4662,     220,     732,     -48,    -141,     -17   //Acá deberá poner sus OFFSETS.
+#define OFFSETS  -4662,     220,     732,     -48,    -141,     -17   //Acá deberá poner sus OFFSETS.
 
 #define spamtimer(t) for (static uint32_t SpamTimer; (uint32_t)(millis() - SpamTimer) >= (t); SpamTimer = millis()) 
 

@@ -6,6 +6,8 @@
 #define mot1_DER 7 
 #define mot2_DER 8
 #define mot2_IZQ 12
+#define PWM_mot1 6
+#define PWM_mot2 5
 
 SoftwareSerial modu(TXD, RXD); //comunicación entre arduino y módulo
 
@@ -19,6 +21,11 @@ void setup() {
   pinMode(mot1_DER, OUTPUT);
   pinMode(mot2_IZQ, OUTPUT);
   pinMode(mot2_DER, OUTPUT); 
+  pinMode(PWM_mot1, OUTPUT);
+  pinMode(PWM_mot2, OUTPUT);
+
+  analogWrite(PWM_mot1, 150);
+  analogWrite(PWM_mot2, 150);
  
 }
 
